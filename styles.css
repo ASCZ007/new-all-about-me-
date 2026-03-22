@@ -1,0 +1,162 @@
+/* Base */
+:root{
+  --bg: #e6ccff;
+  --purple-dark: #6b0080;
+  --purple: #8b00ff;
+  --text: #333;
+  --card: #ffffff;
+  --shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Layout container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Skip link (accessibility) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  z-index: 999;
+}
+.skip-link:focus {
+  left: 10px;
+}
+
+/* Header */
+.site-header {
+  padding: 24px 0 10px;
+}
+
+.site-title {
+  color: var(--purple-dark);
+  font-size: 42px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #999;
+  margin: 10px 0 6px;
+}
+
+.tagline {
+  text-align: center;
+  margin: 0 0 18px;
+  color: #4a2b55;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.menu-list a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 2px solid var(--purple);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.6);
+  color: var(--purple-dark);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu-list a:hover {
+  background: #fff;
+}
+
+.menu-list a:focus {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+/* Sections / cards */
+.card {
+  background-color: var(--card);
+  padding: 18px 18px;
+  border-radius: 12px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--purple);
+}
+
+h2 {
+  color: var(--purple);
+  font-size: 26px;
+  border-bottom: 3px solid var(--purple);
+  padding-bottom: 10px;
+  margin: 0 0 12px;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--purple-dark);
+}
+
+p { margin: 0; }
+
+/* Pretty list */
+.pretty-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #5a3a66;
+}
+
+/* Grid for favorites */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.mini-card {
+  background: rgba(230,204,255,0.35);
+  border: 1px solid rgba(139,0,255,0.35);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 18px 0 10px;
+  color: #4a2b55;
+}
+
+/* Responsive */
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
